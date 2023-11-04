@@ -1,0 +1,54 @@
+{
+  "Index": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Porttfolio",
+    "contact": "Contact",
+
+    "title": "I'm",
+    "animTitle": "Web-Developer_",
+    "subTitle": "Hi, I'm Denis. Experienced Full-Stack developer from Ukraine based on Nextjs/Nestjs.",
+
+    "aboutTitle": "About",
+    "aboutSpan": "Me",
+    "aboutSubTitle": "Creation of sites with clean cross-browser code. BEM, CSS3, HTML5, MERN, JavaScript, ES6, mongodb, React.js, express.js, node.js.",
+    "text1": "Sites on order, on a technical basis or on a turnkey basis Online stores, news, landings, interactive, etc.",
+    "li1": "I have extensive experience in the development and optimization of sites, web applications.",
+    "li2": "I work for the result, my goal is a quality product.",
+    "li3": "I offer only modern solutions.",
+    "li4": "Clean, readable and logically built code.",
+    "li5": "Do not cut off feedback after the project is completed.",
+    "text2": "Within a week after the transfer of the project, I will make changes to the project for free and immediately, if necessary.",
+    "button": "Write me",
+
+    "skillsTitle": "My",
+    "skillsSpan": "Skills",
+
+    "latestProjectTitle": "Latest",
+    "latestProjectSpan": "Project",
+    "sectionProjectsOne": "E-commerce",
+    "sectionProjectsTwo": "Small projects",
+
+    "contactTitle": "Contact",
+    "contactSpan": "Me!",
+
+    "contactFormName": "Name",
+    "contactFormLastName": "Last Name",
+    "contactFormMobile": "Mobile Namber",
+    "contactFormEmail": "Email Address",
+    "contactFormMessage": "Your Message",
+    "contactFormButton": "Send",
+
+    "contactFormSuccess": "Message sent successfully",
+    "contactFormError": "An error occurred, please try again later",
+
+    "pr1": "Building",
+    "pr2": "better",
+    "pr3": "web",
+    "pr4": "experiments",
+    "pr5": "for",
+    "pr6": "you",
+    "pr7": "..."
+  }
+}

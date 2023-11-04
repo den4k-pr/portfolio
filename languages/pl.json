@@ -1,0 +1,54 @@
+{
+  "Index": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "skills": "Umiejętności",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt",
+
+    "title": "Ja jestem",
+    "animTitle": "Web-Developer_",
+    "subTitle": "Cześć, jestem Denis. Doświadczony programista Full-Stack z Ukrainy, oparty na Nextjs/Nestjs.",
+
+    "aboutTitle": "O",
+    "aboutSpan": "mnie",
+    "aboutSubTitle": "Tworzenie stron internetowych z czystym kodem kompatybilnym ze wszystkimi przeglądarkami. BEM, CSS3, HTML5, MERN, JavaScript, ES6, mongodb, React.js, express.js, node.js.",
+    "text1": "Tworzenie stron na zamówienie, na bazie technicznej lub pod klucz: sklepy internetowe, serwisy informacyjne, landingu, interaktywne itp.",
+    "li1": "Posiadam szerokie doświadczenie w tworzeniu i optymalizacji stron internetowych, aplikacji webowych.",
+    "li2": "Dążę do osiągnięcia wyniku, moim celem jest jakościowy produkt.",
+    "li3": "Oferuję tylko nowoczesne rozwiązania.",
+    "li4": "Czysty, czytelny i logicznie zbudowany kod.",
+    "li5": "Nie odcinam kontaktu po zakończeniu projektu.",
+    "text2": "W ciągu tygodnia od przekazania projektu dokonam bezpłatnych zmian, jeśli będą potrzebne.",
+    "button": "Napisz do mnie",
+
+    "skillsTitle": "Moje",
+    "skillsSpan": "Umiejętności",
+
+    "latestProjectTitle": "Najnowszy",
+    "latestProjectSpan": "Projekt",
+    "sectionProjectsOne": "Sklepy internetowe",
+    "sectionProjectsTwo": "Małe projekty",
+
+    "contactTitle": "Kontakt",
+    "contactSpan": "Ze mną!",
+
+    "contactFormName": "Imię",
+    "contactFormLastName": "Nazwisko",
+    "contactFormMobile": "Numer telefonu",
+    "contactFormEmail": "Adres e-mail",
+    "contactFormMessage": "Twoja wiadomość",
+    "contactFormButton": "Wyślij",
+
+    "contactFormSuccess": "Wiadomość wysłana pomyślnie",
+    "contactFormError": "Wystąpił błąd, spróbuj ponownie później",
+
+    "pr1": "Lepsze ",
+    "pr2": "strony ",
+    "pr3": "internetowe ",
+    "pr4": "dla ",
+    "pr5": "Ciebie",
+    "pr6": "...",
+    "pr7": ""
+  }
+}
