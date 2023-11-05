@@ -30,18 +30,25 @@ export const Project = ({ image, link }: { image: string; link: string }) => {
     }, 200)
   }
 
+  const openNewWindow = () => {
+    
+    window.open(link, "_blank");
+  };
+
   return (
     <figure
-      onClick={() => (HendleClick(!projectInfo), handleClickOutside)}
+      onClick={() => (HendleClick(true), handleClickOutside)}
       style={{ backgroundImage: `url(/${image}.png)` }}
       className={cn(portfolio.portfolio__projects_partBody_part, projectInfo && portfolio.portfolio__projects_partBody_partAnim)}>
       <div style={{opacity: projectInfo ? "0" : "1"}} className={portfolio.video_play_button}><Image style={{marginTop: "-5px"}} src="/click.svg" width={30} height={30} alt='Click' /></div>
-      <figcaption style={{
+      <figcaption
+        onClick={openNewWindow}
+        style={{
         transform: projectInfo ? "translate(-50%, 45%)" : "translate(-50%, 100%)"
-      }} className={portfolio.portfolio__projects_partBody_part__content}>
-        <Link
-          className={portfolio.portfolio__projects_partBody_part__content_visit}
-          href={link}></Link>
+        }} 
+        className={portfolio.portfolio__projects_partBody_part__content}
+      >
+        <div className={portfolio.portfolio__projects_partBody_part__content_visit}></div>
       </figcaption>
     </figure>
   );
