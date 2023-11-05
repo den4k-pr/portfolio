@@ -46,7 +46,6 @@
 
       .portfolio__projects_partBody_part__content:hover {
         background-color: #1f242d;
-        transform: translate(-50%, 40%);
       }
 
       &_part {
@@ -78,6 +77,7 @@
           background-color: #011015;
           border-radius: 50% 50% 0 0;
           border-top: 2px solid #353535;
+          z-index: 10;
           cursor: pointer;
 
           &_visit {
