@@ -1,0 +1,41 @@
+
+@import "../base/variables";
+
+.cursor {
+    width: 5px;
+    height: 5px;
+    background-color: $theardColorContent;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+
+    &::after{
+        content: "";
+        display: block;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid $theardColorContent;
+    }
+}
+
+.cursor.hidden {
+    opacity: 0;
+}
+
+.cursor.clicked{
+    width: 10px;
+    height: 10px;
+
+    &::after{
+        min-width: 35px;
+        height: 35px;
+    }
+}

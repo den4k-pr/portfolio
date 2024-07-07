@@ -1,0 +1,16 @@
+
+
+@mixin iconStep($startColor, $secondColor) {
+    0%, 40% {
+        background-color: $startColor;
+        transform: scale(1.03);
+    }
+    50%, 90% {
+        background-color: $secondColor;
+        transform: scale(1);
+    }
+    100% {
+        background-color: $startColor;
+        transform: scale(1.03);
+    }
+}
