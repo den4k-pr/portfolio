@@ -1,7 +1,5 @@
 
   
-  
-  
 .planets{
   display: flex;
   justify-content: space-between;
@@ -32,13 +30,13 @@
   
 .planetBody::after {
   content: "";
-  top: 55%;
-  left: 22%;
-  width: 100px;
-  height: 50px;
+  top: 65%;
+  left: 50%;
+  width: 0;
+  height: 0;
   position: absolute;
   background: rgb(0, 0, 0);
-  box-shadow: 0 0 63px 74px rgb(0, 0, 0);
+  box-shadow: 0 0 75px 91px rgb(0, 0, 0);
   border-radius: 50%
 }
     
@@ -117,9 +115,9 @@
   .planetBody::after {
     content: "";
     top: 55%;
-    left: 45%;
-    width: 25px;
-    height: 25px;
+    left: 48%;
+    width: 0;
+    height: 0;
     box-shadow: 0 0 57px 59px rgb(0, 0, 0);
   }
 }
