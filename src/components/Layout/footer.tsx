@@ -3,19 +3,29 @@ import { listIcons, listLinks } from "../../templates/footerTemplates";
 
 export const Footer = () => {
     const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const isFormContactActive = queryParams.get('form') === 'contact';
 
     return (
         <footer className="footer">
             <p className="footer-text">Copyright © 2024 | All Rights Reserved.</p>
             <ul className="footer__list">
                 {listLinks.map((link, index) => {
-                    const isActive = location.pathname === link.to;
-                    const toPath = link.to === "?form=contact" ? `${location.pathname}?form=contact` : link.to;
-                    
+                    const isActive =
+                        location.pathname === link.to ||
+                        (link.to === '?form=contact' && isFormContactActive);
+
+                    const toPath =
+                        link.to === '?form=contact'
+                            ? `${location.pathname}?form=contact`
+                            : link.to;
+
                     return (
                         <li key={index}>
                             <Link
-                                className={`footer__list-link ${isActive ? "activeLink" : ""}`}
+                                className={`footer__list-link ${
+                                    isActive ? 'activeLink' : ''
+                                }`}
                                 to={toPath}
                                 onClick={isActive ? (e) => e.preventDefault() : undefined}
                             >
