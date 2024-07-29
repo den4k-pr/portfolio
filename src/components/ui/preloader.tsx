@@ -2,13 +2,18 @@ import React, { useState, useEffect } from 'react';
 
 export const Preloader = () => {
     const [loaded, setLoaded] = useState(false);
+    const [timeoutReached, setTimeoutReached] = useState(false);
 
     useEffect(() => {
         const handleLoad = () => {
-            setTimeout(() => {
-                setLoaded(true);
-            }, 500);
+            setLoaded(true);
         };
+
+        const handleTimeout = () => {
+            setTimeoutReached(true);
+        };
+
+        const timeoutId = setTimeout(handleTimeout, 3000);
 
         if (document.readyState === 'complete') {
             handleLoad();
@@ -17,16 +22,31 @@ export const Preloader = () => {
         }
 
         return () => {
+            clearTimeout(timeoutId);
             window.removeEventListener('load', handleLoad);
         };
     }, []);
 
+    const isPreloaderHidden = loaded || timeoutReached;
+
     return (
-        <div style={{opacity: loaded ? "0" : "1", visibility: loaded ? "hidden" : "visible"}} className="preloader rocket-preloader">
-            <div style={{ transition: "all 1s", transform: loaded ? "translateX(1000px)" : "translateX(0px)" }}>
-                <div className='rocket-fierOne'></div>
+        <div
+            style={{
+                opacity: isPreloaderHidden ? '0' : '1',
+                visibility: isPreloaderHidden ? 'hidden' : 'visible',
+                transition: 'opacity 1s, visibility 1s'
+            }}
+            className="preloader rocket-preloader"
+        >
+            <div
+                style={{
+                    transition: 'transform 1s',
+                    transform: isPreloaderHidden ? 'translateX(1000px)' : 'translateX(0px)'
+                }}
+            >
+                <div className="rocket-fierOne"></div>
                 <div className="rocket"></div>
-                <div className='rocket-fierTwo'></div>
+                <div className="rocket-fierTwo"></div>
             </div>
         </div>
     );
