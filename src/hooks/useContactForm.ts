@@ -52,7 +52,12 @@ export const useContactForm = () => {
                     setTimeout(() => {
                         setSuccess(false);
                         navigate(location.pathname);
-                    }, 3000); // Перенаправлення через 3 секунди
+                        setFormData({
+                            fullName: "",
+                            email: "",
+                            message: ""
+                        });
+                    }, 1500); 
                 } else {
                     setError("Помилка при відправці форми. Спробуйте ще раз.");
                 }
