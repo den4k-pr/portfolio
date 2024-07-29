@@ -6,7 +6,9 @@ export const Preloader = () => {
 
     useEffect(() => {
         const handleLoad = () => {
-            setLoaded(true);
+            setTimeout(() => {
+                setLoaded(true);
+            }, 500)  
         };
 
         const handleTimeout = () => {
