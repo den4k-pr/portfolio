@@ -1,0 +1,97 @@
+
+@import "../base/mixins";
+@import "../base/variables";
+
+.skills{
+    display: flex;
+    position: relative;
+
+    .skillsGreeting{
+        flex: 50%;
+    }
+
+    &__line{
+        flex: 50%;
+        
+        .line{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 50px;
+            max-width: 504px;
+            width: 100%;
+            height: 100vh;
+            padding-bottom: 50px;
+
+            &__track{
+                max-width: 350px;
+                height: 370px;
+
+                margin-left: auto;
+                overflow: hidden;
+
+                &-row{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    padding: 0 20px;
+
+                    animation: scroll 30s linear infinite;
+
+                    gap: 50px;
+
+                    &-item{
+                        width: 55px;
+                        object-fit: contain;
+                        height: 55px;
+                        padding: 15px;
+                        background-color: $secondColorContent;
+                        border-bottom: 1px solid $baseColorContent;
+
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.firstActiveIcon{
+    animation: iconFirstStep 7s linear infinite;
+}
+
+.secondActiveIcon{
+    animation: iconSecondStep 11s linear infinite;
+}
+  
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes iconFirstStep {
+    @include iconStep($theardColorContent, $secondColorContent);
+}
+
+@keyframes iconSecondStep {
+    @include iconStep($secondColorContent, $fourthColorContent);
+}
+
+@media(max-width: 600px) {
+    .skills__line .line__track{
+        height: 500px;
+
+        &-row{
+            animation: scroll 45s linear infinite;
+        }
+    }
+}

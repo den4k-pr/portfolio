@@ -1,0 +1,238 @@
+
+@import "../base/variables";
+
+.work{
+    display: flex;
+    position: relative;
+
+    .workGreeting{
+        flex: 50%;
+
+        position: relative;
+    }
+
+    &__table{
+        flex: 50%;
+
+        .table{
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+
+            border: 2px solid $secondColorContent;
+
+            max-width: 504px;
+            width: 100%;
+            height: 100vh;
+            padding-bottom: 50px;
+        }
+
+    }
+}
+
+.table-item{
+    max-width: 500px;
+    width: 100%;
+    height: 200px;
+
+    background-color: $baseColorContent;
+
+    display: flex;
+    
+
+    .item__info{
+        flex: 50%;
+        
+        display: flex;
+        justify-content: space-between;
+
+        gap: 10px;
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        align-items: end;
+        position: relative;
+
+        &-link{
+            display: block;
+            position: absolute;
+            
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 50px;
+                height: 50px;
+
+                transition: .3s;
+            }
+        }
+        
+        &-title{
+            font-size: 12px;
+            line-height: 25px;
+            font-weight: 700;
+    
+            color: $theardColorContent;
+        }
+    
+        &-number{
+            font-size: 52px;
+            line-height: 52px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #2d2d2d, #838383); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+
+    .work-image{
+        flex: 50%;
+    }
+    .work-image img{
+        object-fit: cover;
+        max-width: 250px;
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.item__info:hover .item__info-link img {
+    transform: scale(1.05);
+}
+
+
+.sortList{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    gap: 27px;
+    top: 50%;
+    left: 172px;
+    transform: translate(-50%, -50%);
+
+    &-link{
+        font-size: 12px;
+        line-height: 20px;
+
+        color: $textColor;
+    }
+}
+
+.sortLinkActive{
+    color: $theardColorContent;
+    font-weight: 700;
+}
+
+.sortList-link:nth-child(1){
+    margin-left: 0px;
+}
+
+.sortList-link:nth-child(2){
+    margin-left: -18px;
+}
+
+.sortList-link:nth-child(3){
+    margin-left: -17px;
+}
+
+.sortList-link:nth-child(4){
+    margin-left: -45px;
+}
+
+
+@media(max-width: 870px) {
+    .sortList{
+        bottom: 150px;
+        left: 128px;
+        top: initial;
+        transform: initial;
+    }
+
+    .sortList-link:nth-child(1){
+        margin-left: -40px;
+    }
+    
+    .sortList-link:nth-child(2){
+        margin-left: -35px;
+    }
+    
+    .sortList-link:nth-child(3){
+        margin-left: -17px;
+    }
+    
+    .sortList-link:nth-child(4){
+        margin-left: -27px;
+    }
+    
+    .work__table .table{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .table-item{
+        max-width: 250px;
+        margin: 0 auto;
+
+        border-bottom: 3px solid $theardColorContent;
+    }
+    .table-item .item__info-link img {
+        width: 50px;
+        height: 50px;
+        background: #f7f7f7;
+        border-radius: 50%;
+        padding: 10px;
+        opacity: 0.6;
+    }
+    .table-item .item__info-link{
+        z-index: 3;
+    }
+    .table-item{
+        position: relative;
+    }
+    .table-item .work-image{
+        position: absolute;
+        opacity: 0.5;
+    }
+    .item__info-title{
+        font-size: 10px !important;
+    }
+    .table-item .item__info-title,
+    .table-item .item__info-number{
+        z-index: 3;
+    }
+}
+
+@media(max-width: 600px) {
+    .table-item{
+        max-width: 200px;
+        margin: 0 0 0 auto;
+    }
+
+    .sortList{
+        bottom: 135px;
+        left: 128px;
+    }
+
+    .sortList-link:nth-child(1){
+        margin-left: -80px;
+    }
+    
+    .sortList-link:nth-child(2){
+        margin-left: -40px;
+    }
+    
+    .sortList-link:nth-child(3){
+        margin-left: -20px;
+    }
+    
+    .sortList-link:nth-child(4){
+        margin-left: -30px;
+    }
+    
+}

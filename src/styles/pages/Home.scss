@@ -1,0 +1,193 @@
+
+@import "../base/variables";
+
+.home{
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    
+    .profile{
+        position: relative;
+        margin: 0 auto;
+        max-width: 770px;
+        width: 100%;
+        height: 100vh;
+
+        &-circle{
+            position: absolute;
+            overflow: hidden;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.7);
+            transition: all 1s;
+            
+            .circle{
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.profile-circle.activeProfile{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.face{
+    position: absolute;
+    bottom: 0px;
+    right: -70px;
+    width: 400px;
+    height: 400px;
+    transform: rotate(-5deg);
+}
+
+.profile__list{
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+
+    transition: all 1s;
+    transform: translate(-0%, -50%) scale(0.5);
+
+    color: $textColor;
+    gap: 35px;
+
+    &-link{
+        display: flex;
+        align-items: center;
+
+        font-size: 12px;
+        gap: 10px;
+
+        &::before{
+            content: "";
+            display: block;
+
+            width: 10px;
+            height: 2px;
+            border-radius: 2px;
+
+            background-color: $theardColorContent;
+        }
+    }
+}
+
+.profile__list.activeProfileList{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.profile__list-link:nth-child(4),
+.profile__list-link:nth-child(2){
+    padding-left: 17px;
+}
+
+.profile__list-link:nth-child(3){
+    padding-left: 21px;
+}
+
+.profile-circle::before{
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    height: 250px;
+    width: 250px;
+    background-color: $theardColorContent;
+    border-radius: 50%;
+    box-shadow: 0 0 150px -50px #fff;
+}
+
+.greeting{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: all 1.5s;
+    z-index: 3;
+
+    .title{
+        font-size: 62px;
+        line-height: 70px;
+        font-weight: 700;
+
+        color: $theardColorContent;
+    }
+
+    &-text{
+        display: flex;
+        gap: 20px;
+        color: $textColor;
+        font-size: 14px;
+        line-height: 20px;
+        padding-top: 10px;
+        max-width: 250px;
+
+        &:before{
+            content: "";
+
+            display: block;
+
+            width: 100px;
+            height: 4px;
+            margin-top: 5px;
+
+            background-color: $theardColorContent;
+
+            border-radius: 2px;
+        }
+    }
+}
+
+@media(max-width: 870px){
+    .profile__list,
+    .profile-circle{
+        top: 44% !important;
+    }
+}
+
+@media(max-width: 740px){
+    .profile__list{
+        display: none;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .face{
+        width: 320px;
+        height: 320px;
+    }
+    
+    .profile-circle::before{
+        height: 200px;
+        width: 200px;
+        box-shadow: 0 0 110px -35px #fff
+    }
+
+    .greetingMobile{
+        max-width: 150px;
+    }
+    .greeting{
+        
+        .title{
+            font-size: 50px;
+        }
+
+        &-text{
+            font-size: 12px;
+        }
+    }
+}
+
+@media(max-width: 430px) {
+    .profile-circle{
+        top: 40% !important;
+    }
+}

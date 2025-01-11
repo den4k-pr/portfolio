@@ -1,0 +1,173 @@
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .preloaderCircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .circle_green {
+    background-color: #f3a200;
+    transform: translateX(13px);
+    animation: animate-green 2s linear infinite;
+  }
+  
+  .circle_red {
+    background-color: #ffffff;
+    transform: translateX(-13px);
+    animation: animate-red 2s linear infinite;
+  }
+  
+  @keyframes animate-green {
+    0% {
+      background-color: #ffffff;
+    }
+  
+    3% {
+      background-color: #ffffff;
+      transform: translateX(13px);
+    }
+    
+    9% {
+      background-color: #f3a200;
+      transform: translateX(-20px);
+    }
+    
+    14% {
+      transform: translateX(2px);
+    }
+  
+    18% {
+      transform: translateX(-12px);
+    }
+  
+    21% {
+      transform: translateX(-3px);
+    }
+  
+    23% {
+      transform: translateX(-9px);
+    }
+  
+    24% {
+      transform: translateX(-7px);
+    }
+  
+    30% {
+      transform: translateX(-7px) scale(1);
+      animation-timing-function: cubic-bezier(.6, 0, 1, 1);
+    }
+  
+    43% {
+      z-index: -1;
+      transform: translateX(13px) scale(.6);
+      animation-timing-function: cubic-bezier(0, 0, .4, 1);
+    }
+  
+    56% {
+      z-index: 1;
+      transform: translateX(33px) scale(1);
+      animation-timing-function: cubic-bezier(.6, 0, 1, 1);
+    }
+    
+    69% {
+      transform: translateX(13px) scale(1.4);
+      animation-timing-function: cubic-bezier(0, 0, .4, 1);
+    }
+  
+    82% {
+      z-index: 1;
+      background-color: #f3a200;
+      transform: translateX(-7px) scale(1);
+      animation-timing-function: ease-in;
+    }
+  
+    98% {
+      background-color: #fff;
+      transform: translateX(13px);
+    }
+  
+    100% {
+      background-color: #fff;
+    }
+  }
+  
+  @keyframes animate-red {
+    0% {
+      background-color: #fff;
+    }
+  
+    3% {
+      background-color: #fff;
+      transform: translateX(-13px);
+    }
+    
+    9% {
+      background-color: #f3a200;
+      transform: translateX(20px);
+    }
+    
+    14% {
+      transform: translateX(-2px);
+    }
+  
+    18% {
+      transform: translateX(12px);
+    }
+  
+    21% {
+      transform: translateX(3px);
+    }
+  
+    23% {
+      transform: translateX(9px);
+    }
+  
+    24% {
+      transform: translateX(7px);
+    }
+  
+    30% {
+      transform: translateX(7px) scale(1);
+      animation-timing-function: cubic-bezier(.6, 0, 1, 1);
+    }
+  
+    43% {
+      transform: translateX(-13px) scale(1.4);
+      animation-timing-function: cubic-bezier(0, 0, .4, 1);
+    }
+  
+    56% {
+      transform: translateX(-33px) scale(1);
+      animation-timing-function: cubic-bezier(.6, 0, 1, 1);
+    }
+  
+    69% {
+      transform: translateX(-13px) scale(.6);
+      animation-timing-function: cubic-bezier(0, 0, .4, 1);
+    }
+  
+    82% {
+      background-color: #f3a200;
+      transform: translateX(7px) scale(1);
+      animation-timing-function: ease-in;
+    }
+  
+    98% {
+      background-color: #fff;
+      transform: translateX(-13px);
+    }
+  
+    100% {
+      background-color: #fff;
+    }
+  }
+  
+  
+  
