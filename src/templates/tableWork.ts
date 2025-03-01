@@ -72,5 +72,13 @@ export const tableWork = [
         category: ["E-comm"],
 
         img: "liftshop-zb"
+    },
+    {
+        id: 10,
+        title: "SKYABS",
+        link: "https://www.skyads.app/",
+        category: ["Landing", "Corporate"],
+
+        img: "skyads"
     }
 ]
