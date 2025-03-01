@@ -79,6 +79,6 @@ export const tableWork = [
         link: "https://www.skyads.app/",
         category: ["Landing", "Corporate"],
 
-        img: "skyabs"
+        img: "skyads"
     }
 ]
